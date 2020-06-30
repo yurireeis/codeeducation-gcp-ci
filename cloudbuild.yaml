@@ -1,0 +1,4 @@
+steps:
+        - id: "Unit Tests"
+          name: 'gcr.io/$PROJECT_ID/golang'
+          args: ['go','test']
