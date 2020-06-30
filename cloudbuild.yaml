@@ -2,3 +2,10 @@ steps:
         - id: "Unit Tests"
           name: 'gcr.io/$PROJECT_ID/golang'
           args: ['go','test']
+
+        - id: "App Image Publish"
+          name: 'gcr.io/cloud-builders/docker'
+          args: ['build','-t','gcr.io/$PROJECT_ID/math-custom:latest','.']
+
+images:
+            - 'gcr.io/$PROJECT_ID/math-custom:latest'
