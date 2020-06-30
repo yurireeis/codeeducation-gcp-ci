@@ -1,4 +1,0 @@
-steps:
-  - id: "Unit Tests"
-  name: 'gcr.io/cloud-builders/go'
-  args: ['go', 'test']
